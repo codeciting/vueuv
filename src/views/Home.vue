@@ -21,7 +21,7 @@
 <script>
   // @ is an alias to /src
   import HelloWorld from '@/components/HelloWorld.vue'
-  import Responsive from '@/lib/functional-component/Responsive'
+  import Responsive from '@/lib/components/functional-component/Responsive'
 
   export default {
     name: 'home',

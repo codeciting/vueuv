@@ -2,7 +2,7 @@ import Vue from 'vue'
 
 import { shallowMount } from '@vue/test-utils'
 import config from '@/lib/config'
-import Responsive from '@/lib/functional-component/Responsive.vue'
+import Responsive from '@/lib/components/functional-component/Responsive.vue'
 
 describe('Responsive.vue', () => {
   it('renders right slot', async () => {

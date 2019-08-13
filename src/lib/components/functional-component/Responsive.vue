@@ -1,7 +1,7 @@
 <script>
   import { selectSizer, useResponsiveSizer } from '@/lib/observable/responsiveSizer'
   import { windowSize } from '@/lib/observable/browser/window'
-  import { mergeClasses } from '@/lib/functional-component/utils'
+  import { mergeClasses } from '@/lib/components/functional-component/utils'
 
   export default {
     name: 'Responsive',
