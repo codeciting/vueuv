@@ -1,4 +1,7 @@
 module.exports = {
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/lib/**/*.{js,vue}", "!**/node_modules/**"],
+  "coverageReporters": ['html'],
   moduleFileExtensions: [
     'js',
     'jsx',
@@ -26,5 +29,12 @@ module.exports = {
   watchPlugins: [
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname'
-  ]
+  ],
+  globals: {
+    resizeTo (width, height) {
+      this.innerWidth = width
+      this.innerHeight = height
+      this.dispatchEvent(new this.Event('resize'))
+    }
+  }
 }
