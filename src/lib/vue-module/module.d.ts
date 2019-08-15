@@ -12,6 +12,12 @@ declare interface VueModuleDeclare<S, R> {
   name: string
   path: string
   config: () => Promise<VueModuleConfig<S, R>>
+}
+
+declare interface VueModuleConfig<S, R> {
+  component: Component
+  store?: Module<S, R>
+  router?: RouteConfig[]
 
   /**
    * Default to name
@@ -22,11 +28,5 @@ declare interface VueModuleDeclare<S, R> {
    * Default to name
    */
   routerName?: string
-}
-
-declare interface VueModuleConfig<S, R> {
-  component: Component
-  store?: Module<S, R>
-  router?: RouteConfig[]
 }
 
