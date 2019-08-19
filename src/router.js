@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Components from './views/Components'
+import Button from './views/components/Button'
 
 Vue.use(Router)
 
@@ -18,6 +20,17 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    },
+    {
+      path: '/components',
+      component: Components,
+      children: [
+        {
+          path: 'button',
+          name: 'components/button',
+          component: Button
+        }
+      ]
     }
   ]
 })

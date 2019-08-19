@@ -1,0 +1,62 @@
+.ui-layout {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  appearance: none;
+  outline: none;
+  box-sizing: border-box;
+
+  &.list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &.horizontal {
+      height: 56px;
+      flex-direction: row;
+
+      &.spread {
+        width: 100%;
+      }
+
+      > * {
+        height: 100%;
+      }
+    }
+
+    &.vertical {
+      width: 240px;
+      flex-direction: column;
+
+      &.spread {
+        height: 100%;
+      }
+
+      > * {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.ui-page {
+  display: flex;
+  flex-direction: row;
+
+  > .sidebar {
+    max-width: 240px;
+    min-width: 160px;
+    box-sizing: border-box;
+  }
+
+  > .content {
+    flex: 1;
+    height: 100%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+    box-sizing: border-box;
+  }
+}

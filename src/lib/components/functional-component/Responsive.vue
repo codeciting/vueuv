@@ -28,6 +28,7 @@
         children = [ctx.scopedSlots[sizeName](windowSize)]
       }
       return h(ctx.props.tag, {
+        ...ctx.data,
         class: mergeClasses(ctx, ctx.props.addClass ? sizeName : null)
       }, children)
     }
